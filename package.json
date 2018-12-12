@@ -1,0 +1,18 @@
+{
+    "name": "splash",
+    "dependencies": {
+        "@origami/origami": "^0.0.3-alpha.7",
+        "origami-plugin-favicon": "^0.0.1",
+        "origami-plugin-markdown-docs": "^0.0.5-alpha.0",
+        "pug": "^2.0.3",
+        "request-promise-native": "^1.0.5"
+    },
+    "scripts": {
+        "start": "node index"
+    },
+    "devDependencies": {
+        "@commitlint/config-conventional": "^7.1.2",
+        "commitlint": "^7.2.1",
+        "husky": "^1.1.2"
+    }
+}

@@ -1,0 +1,145 @@
+html, body {
+    min-height: 100%;
+    height: 100%;
+    background-color: var(--color-black);
+
+}
+
+body {
+    background: url('/origami/waves-white.svg');
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    right: var(--size-small);
+    z-index: 1;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+nav li {
+    display: inline-block;
+    line-height: var(--size-large);
+    vertical-align: middle;
+    margin-left: var(--size-small);
+}
+
+nav a {
+    color: var(--color-white);
+    font-weight: 600;
+    opacity: 0.5;
+    transition: all calc(var(--transition-time)/2);
+}
+
+nav a:hover {
+    opacity: 1;
+}
+
+svg.i {
+    filter: brightness(12);
+}
+
+.col {
+    position: relative;
+    grid-column: span 2;
+    grid-row: span 1;
+    padding: var(--size-main);
+}
+
+.info {
+    height: 40vh;
+}
+
+.center {
+    width: 100%;
+    max-width: 50rem;
+    padding: var(--size-small);
+}
+
+.status {
+    display: inline-block;
+    color: var(--color-white);
+    background: var(--color-blue);
+    height: var(--size-medium);
+    line-height: var(--size-medium);
+    padding: 0 var(--size-tiny);
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: var(--font-size-tiny);
+    border-radius: calc(var(--size-medium)/2);
+}
+
+.button.blue {
+    background: var(--color-blue);
+}
+
+h2 {
+    font-size: var(--font-size-main);
+    color: var(--color-grey-500);
+}
+
+form {
+    height: 60vh;
+    background: var(--color-white);
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: var(--size-small);
+    align-content: center;
+}
+.grid, form .success {
+    margin: auto;
+    max-width: 50rem;
+}
+
+label {
+    display: block;
+    margin-bottom: var(--size-tiny);
+}
+
+.grid>* {
+    grid-column: span 2;
+}
+
+.grid .w50 {
+    grid-column: span 1;
+}
+
+form input {
+    margin-bottom: 0;
+}
+
+form .success {
+    display: none;
+}
+form.success .grid {
+    display: none;
+}
+form.success .success {
+    display: block;
+}
+
+@media (min-width: 700px) {
+    h2 {
+        font-size: var(--h3-font-size);
+    }
+
+    nav {
+        position: absolute;
+        top: var(--size-small);
+        right: var(--size-main);
+    }
+
+    .col {
+        height: auto;
+        grid-column: span 1;
+        grid-row: span 2;
+    }
+}

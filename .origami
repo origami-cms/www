@@ -1,0 +1,21 @@
+{
+    "app": {
+        "name": "splash"
+    },
+    "admin": false,
+
+    "plugins": {
+        "favicon": true,
+        "./plugins/mailchimp:mailchimp": {},
+        "markdown-docs": {
+            "include": [
+                {"type": "tutorials", "path": "./docs/tutorials"},
+                {"type": "apiReference", "path": "node_modules/@origami/origami/docs.json"},
+                {"type": "apiReference", "path": "node_modules/@origami/core-server/docs.json"},
+                {"type": "apiReference", "path": "node_modules/@origami/core-lib/docs.json"}
+            ],
+            "logo": "/origami/logo.svg",
+            "siteTitle": "Origami Docs"
+        }
+    }
+}
